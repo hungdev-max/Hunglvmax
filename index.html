@@ -1,0 +1,227 @@
+ <!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Hùng Profile Card</title>
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  />
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #e8e8e8;
+    }
+
+    .card {
+      width: 280px;
+      height: 280px;
+      background: white;
+      border-radius: 32px;
+      padding: 3px;
+      position: relative;
+      box-shadow: 0 40px 40px rgba(0,0,0,0.15);
+      transition: 0.5s;
+    }
+
+    /* Mail */
+    .mail {
+      position: absolute;
+      top: 1.4rem;
+      right: 2rem;
+      background: none;
+      border: none;
+      z-index: 5;
+    }
+
+    .mail a {
+      color: #2fbfec;
+      font-size: 24px;
+      transition: 0.3s;
+    }
+
+    .mail a:hover {
+      color: red;
+    }
+
+    /* Avatar */
+    .profile-pic {
+      position: absolute;
+      inset: 3px;
+      border-radius: 29px;
+      overflow: hidden;
+      transition: 0.5s;
+      z-index: 1;
+    }
+
+    .profile-pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.5s;
+    }
+
+    /* Bottom */
+    .bottom {
+      position: absolute;
+      left: 3px;
+      right: 3px;
+      bottom: 3px;
+      top: 80%;
+      background: #2fbfec;
+      border-radius: 29px;
+      transition: 0.5s;
+      z-index: 2;
+      color: white;
+    }
+
+    .content {
+      position: absolute;
+      left: 1.5rem;
+      right: 1.5rem;
+      bottom: 3.8rem;
+    }
+
+    .name {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    .about-me {
+      font-size: 0.9rem;
+      margin-top: 0.8rem;
+      display: block;
+    }
+
+    .bottom-bottom {
+      position: absolute;
+      left: 1.5rem;
+      right: 1.5rem;
+      bottom: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Social */
+    .social-links-container a {
+      color: white;
+      margin-right: 12px;
+      font-size: 20px;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+
+    .social-links-container a:hover {
+      color: red;
+      transform: scale(1.3);
+    }
+
+    /* Button */
+    .button {
+      background: white;
+      color: #2fbfec;
+      border: none;
+      border-radius: 20px;
+      padding: 5px 10px;
+      font-size: 0.7rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background: red;
+      color: white;
+    }
+
+    /* Hover effect */
+    .card:hover .bottom {
+      top: 20%;
+    }
+
+    .card:hover .profile-pic {
+      width: 100px;
+      height: 100px;
+      top: 10px;
+      left: 10px;
+      border-radius: 50%;
+      border: 6px solid #2fbfec;
+      z-index: 3;
+    }
+
+    .card:hover .profile-pic img {
+      transform: scale(2.3);
+      position: relative;
+      top: -50px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+
+    <!-- Mail -->
+    <button class="mail">
+      <a href="phianh6010@gmail.com">
+        <i class="fa-regular fa-envelope"></i>
+      </a>
+    </button>
+
+    <!-- Avatar -->
+    <div class="profile-pic">
+      <img src="https://i.pravatar.cc/300" alt="avatar">
+    </div>
+
+    <!-- Info -->
+    <div class="bottom">
+      <div class="content">
+        <span class="name">Hùng Lập trình lỏ</span>
+        <span class="about-me">
+          Nắm 10C1 😆
+        </span>
+      </div>
+
+      <div class="bottom-bottom">
+
+        <!-- Social -->
+        <div class="social-links-container">
+          <a href="https://www.facebook.com/share/1DR1dsK1mg/" target="_blank">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+
+          <a href="https://www.tiktok.com/@phi.hung.love.you?_r=1&_t=ZS-932NadhrJPG" target="_blank">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+
+          <a href="https://zalo.me/84962969042" target="_blank">
+            <i class="fa-solid fa-comment-dots"></i>
+          </a>
+        </div>
+
+        <!-- Contact button -->
+        <button class="button">Contact Me</button>
+
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
